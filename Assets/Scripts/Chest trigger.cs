@@ -13,9 +13,9 @@ public class Chesttrigger : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(UnityEngine.Collider other)
     {
-        if (collision.rigidbody.CompareTag("TheKey"))
+        if (other.attachedRigidbody.CompareTag("TheKey"))
         {
             gameObject.GetComponent<Animation>().Play();
         }

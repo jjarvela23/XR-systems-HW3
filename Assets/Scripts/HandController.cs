@@ -19,12 +19,10 @@ public class HandController : MonoBehaviour
     void Update()
     {
         float gripValue = gripReference.action.ReadValue<float>();
-        Debug.Log(gripValue);
         handAnimator.SetFloat("Grip", gripValue);
 
 
         float triggerValue = triggerReference.action.ReadValue<float>();
-        Debug.Log(triggerValue);
         handAnimator.SetFloat("Trigger", triggerValue);
     }
 }
