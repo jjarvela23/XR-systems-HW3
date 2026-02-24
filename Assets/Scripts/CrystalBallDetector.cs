@@ -16,17 +16,17 @@ public class CrystalBallDetector : MonoBehaviour
         if (collisionCount >= 10)
         {
             RoomLight.GetComponent<Lighton>().TurnOn();
+            ExitLight.GetComponent<Lighton>().TurnOn();
+            GameObject.FindGameObjectWithTag("Exit").gameObject.GetComponent<OpenExit>().clearRoom(7);
         }
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
         collisionCount++;
-        Debug.Log(collisionCount);
     }
     private void OnTriggerExit(UnityEngine.Collider other)
     {
         collisionCount--;
-        Debug.Log(collisionCount);
     }
 }

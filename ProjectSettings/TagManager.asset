@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Magnetic
   - TheKey
+  - Exit
   layers:
   - Default
   - TransparentFX
